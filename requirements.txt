@@ -15,11 +15,16 @@ prompt-toolkit==1.0.7
 ptyprocess==0.5.1
 py==1.4.31
 pytest==3.0.2
+pytest-base-url==1.1.0
 pytest-cov==2.3.1
 pytest-django==3.0.0
+pytest-html==1.10.0
 pytest-ipdb==0.1.dev2
+pytest-selenium==1.3.1
 pytest-sugar==0.7.1
+pytest-variables==1.4
 python-dateutil==2.5.3
+requests==2.11.1
 selenium==2.53.6
 simplegeneric==0.8.1
 six==1.10.0
