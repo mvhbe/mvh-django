@@ -14,17 +14,18 @@ class TestSeleniumKalenders(object):
     """webdriver test voor de app kalenders."""
 
     @pytest.fixture
-    def driver(self, request):
+    def browser(self, request):
         """webdriver opzetten voor Safari."""
-        driver = webdriver.Firefox(firefox_binary=FirefoxBinary(FIREFOX_PATH))
-        driver.implicitly_wait(10)
+        browser = webdriver.Firefox(firefox_binary=FirefoxBinary(FIREFOX_PATH))
+        browser.implicitly_wait(10)
 
-        def driver_quit():
-            driver.quit()
-        request.addfinalizer(driver_quit)
-        return driver
+        def browser_quit():
+            browser.quit()
+        request.addfinalizer(browser_quit)
+        return browser
 
-    def test_kalenders(self, driver):
+    def test_kalenders(self, browser):
         """webdriver test."""
-        response = driver.get(URL)
+        response = browser.get(URL)
+        print("response =", response)
         assert "kalenders" in response
