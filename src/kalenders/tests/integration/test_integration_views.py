@@ -8,4 +8,7 @@ from kalenders import views
 class TestKalendersView(object):
     """Test overzicht kalenders."""
 
-    def test_ 
+    def test_kalenders_home(self):
+        request = RequestFactory().get("/kalenders/")
+        response = views.home(request)
+        assert response.status_code == 200

@@ -27,5 +27,5 @@ class TestSeleniumKalenders(object):
     def test_kalenders(self, browser):
         """webdriver test."""
         response = browser.get(URL)
-        print("response =", response)
-        assert "kalenders" in response
+        print("response = ", response)
+        assert "kalenders" in response.body

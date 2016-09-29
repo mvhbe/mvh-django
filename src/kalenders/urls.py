@@ -5,5 +5,5 @@ from django.conf.urls import url
 from kalenders import views
 
 urlpatterns = [
-    url(r'^$', views.kalenders),
+    url(r'^$', views.home, name="home"),
 ]
